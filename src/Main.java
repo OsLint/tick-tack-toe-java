@@ -66,11 +66,11 @@ public class Main {
     }
     public static void printBoard() {
         for (int i = 0; i < board.length; i++) {
-            String color = board[i].getSymbol();
-            if (color.equals(" ")) {
+            String symbol = board[i].getSymbol();
+            if (symbol.equals(" ")) {
                 System.out.print("|" + (i+1));
             } else {
-                System.out.print("|" + color);
+                System.out.print("|" + symbol);
             }
             if ((i+1) % 3 == 0) {
                 System.out.println("|");
@@ -129,18 +129,18 @@ public class Main {
 
  class Field {
 
-    private String symbol = " ";
+    private String symbol;
 
-     public Field(String color) {
-         this.symbol = color;
+     public Field(String symbol) {
+         this.symbol = symbol;
      }
 
      public String getSymbol() {
          return symbol;
      }
 
-     public void setSymbol(String color) {
-         this.symbol = color;
+     public void setSymbol(String symbol) {
+         this.symbol = symbol;
      }
 
      @Override
